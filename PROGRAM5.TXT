@@ -1,0 +1,497 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R
+0
+ 23.50.38 JOB08100 ---- WEDNESDAY, 12 DEC 2018 ----
+ 23.50.38 JOB08100  IRR010I  USERID KC03CF1  IS ASSIGNED TO THIS JOB.
+ 23.50.39 JOB08100  IEF677I WARNING MESSAGE(S) FOR JOB KC03CF1X ISSUED
+ 23.50.39 JOB08100  ICH70001I KC03CF1  LAST ACCESS AT 23:47:47 ON WEDNESDAY, DECEMBER 12, 2018
+ 23.50.39 JOB08100  $HASP373 KC03CF1X STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 23.50.39 JOB08100  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 23.50.39 JOB08100  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 23.50.39 JOB08100  -KC03CF1X                      08    471 ******    .00     .0   1221   0      0      0      0     0
+ 23.50.39 JOB08100  -KC03CF1X                      00    175 ******    .00     .0    682   0      0      0      0     0
+ 23.50.40 JOB08100  -KC03CF1X                      00   1006 ******    .00     .0    889   0      0      0      0     0
+ 23.50.40 JOB08100  -KC03CF1X ENDED.  NAME-WALLS                TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 23.50.40 JOB08100  $HASP395 KC03CF1X ENDED
+0------ JES2 JOB STATISTICS ------
+-  12 DEC 2018 JOB EXECUTION DATE
+-          282 CARDS READ
+-          496 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           38 SYSOUT SPOOL KBYTES
+-         0.02 MINUTES EXECUTION TIME
+         1 //KC03CF1X JOB 1,WALLS,LINES=(5,CANCEL),NOTIFY=KC03CF1,                 JOB08100
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020005
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030002
+           // PARM.COBOL='NOX'                                                     00040002
+        26 //SYSIN DD *                                                            00050002
+        30 //LKED.SYSPRINT DD DUMMY                                                00092904
+        41 //GO.FILEIN DD DSN=KC02580.GR1PR5M.DAT,DISP=SHR                         00093002
+        42 //GO.FILEIN2 DD DSN=KC02580.GR1PR5T.DAT,DISP=SHR                        00093102
+        43 //GO.FILEOUT DD SYSOUT=A                                                00093202
+        44 //GO.RPTOUT DD SYSOUT=A                                                 00093302
+        45 //GO.ERROUT DD SYSOUT=A                                                 00093402
+        46 //GO.SYSOUT DD SYSOUT=A                                                 00093502
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED
+ ICH70001I KC03CF1  LAST ACCESS AT 23:47:47 ON WEDNESDAY, DECEMBER 12, 2018
+ IEF142I KC03CF1X COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0008
+ IEF373I STEP/COBOL   /START 2018346.2350
+ IEF032I STEP/COBOL   /STOP  2018346.2350
+         CPU:     0 HR  00 MIN  00.04 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:  8888K  SYS:   312K  EXT:  1578504K  SYS:    12224K
+         ATB- REAL:                    72K  SLOTS:                     0K
+              VIRT- ALLOC:      12M SHRD:       0M
+ IEF142I KC03CF1X LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2018346.2350
+ IEF032I STEP/LKED    /STOP  2018346.2350
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    88K  SYS:   304K  EXT:     1640K  SYS:    12168K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03CF1X GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2018346.2350
+ IEF032I STEP/GO      /STOP  2018346.2350
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.01 SEC
+         VIRT:   120K  SYS:   316K  EXT:     2948K  SYS:    12232K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03CF1X/START 2018346.2350
+ IEF033I  JOB/KC03CF1X/STOP  2018346.2350
+         CPU:     0 HR  00 MIN  00.08 SEC    SRB:     0 HR  00 MIN  00.01 SEC
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 12/12/2018  Time 23:50:39   Page     1
+0Invocation parameters:
+  NOX
+0Options in effect:
+  NOADATA
+    ADV
+    QUOTE
+    ARITH(COMPAT)
+  NOAWO
+  NOBLOCK0
+    BUFSIZE(4096)
+  NOCICS
+    CODEPAGE(1140)
+  NOCOMPILE(S)
+  NOCURRENCY
+    DATA(31)
+  NODATEPROC
+    DBCS
+  NODECK
+  NODIAGTRUNC
+  NODLL
+  NODUMP
+  NODYNAM
+  NOEXIT
+  NOEXPORTALL
+  NOFASTSRT
+    FLAG(I,I)
+  NOFLAGMIG4
+  NOFLAGSTD
+    INTDATE(ANSI)
+    LANGUAGE(EN)
+  NOLIB
+    LINECOUNT(60)
+  NOLIST
+  NOMAP
+  NOMDECK
+  NONAME
+    NSYMBOL(NATIONAL)
+  NONUMBER
+    NUMPROC(NOPFD)
+    OBJECT
+  NOOFFSET
+  NOOPTIMIZE
+    OUTDD(SYSOUT)
+    PGMNAME(COMPAT)
+    RENT
+    RMODE(AUTO)
+    SEQUENCE
+    SIZE(MAX)
+    SOURCE
+    SPACE(1)
+  NOSQL
+    SQLCCSID
+  NOSSRANGE
+  NOTERM
+  NOTEST
+  NOTHREAD
+    TRUNC(STD)
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 12/12/2018  Time 23:50:39   Page     2
+0 NOVBREF
+  NOWORD
+    XMLPARSE(XMLSS)
+  NOXREF
+    YEARWINDOW(1900)
+    ZWB
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 12/12/2018  Time 23:50:39   Page     3
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000001                IDENTIFICATION DIVISION.                                         00060002
+   000002                PROGRAM-ID.    CPRPRICE.                                         00061012
+   000003               *     WALLS 12/12/2018                                            00061102
+   000004               *     THIS PROGRAM PRINTS A JOB ORDER LIST WITH PRICES            00061202
+   000005                                                                                 00061302
+   000006                                                                                 00061402
+   000007                ENVIRONMENT DIVISION.                                            00061502
+   000008                INPUT-OUTPUT SECTION.                                            00061702
+   000009                FILE-CONTROL.                                                    00061902
+   000010                    SELECT CPR-FILE                                              00062017
+   000011                         ASSIGN TO FILEIN.                                       00062115
+   000012                    SELECT CPR-TRANS                                             00062202
+   000013                         ASSIGN TO FILEIN2.                                      00062315
+   000014                    SELECT CPR-NEW-MASTER                                        00062402
+   000015                         ASSIGN TO FILEOUT.                                      00062515
+   000016                    SELECT CPR-REPORT                                            00062602
+   000017                         ASSIGN TO RPTOUT.                                       00062715
+   000018                    SELECT CPR-ERROR                                             00062817
+   000019                         ASSIGN TO ERROUT.                                       00062915
+   000020                                                                                 00063002
+   000021                DATA DIVISION.                                                   00063102
+   000022                 FILE SECTION.                                                   00063313
+   000023                 FD CPR-FILE.                                                    00063513
+
+ ==000023==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CPR-FILE".
+
+   000024                 01 CPR-RECORD                      PIC X(45).                   00063613
+   000025                                                                                 00063702
+   000026                 FD CPR-TRANS.                                                   00063813
+
+ ==000026==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CPR-TRANS".
+
+   000027                 01 CPR-TRANS-REC                   PIC X(11).                   00063913
+   000028                                                                                 00064002
+   000029                 FD CPR-NEW-MASTER.                                              00064113
+
+ ==000029==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CPR-NEW-MASTER".
+
+   000030                 01 CL-CPR-LINE                     PIC X(45).                   00064213
+   000031                                                                                 00064302
+   000032                 FD CPR-REPORT.                                                  00064413
+
+ ==000032==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CPR-REPORT".
+
+   000033                 01 CPR-REPORT-LINE                 PIC X(25).                   00064513
+   000034                                                                                 00064602
+   000035                 FD CPR-ERROR.                                                   00064713
+
+ ==000035==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CPR-ERROR".
+
+   000036                 01 CPR-ERROR-LINE                  PIC X(80).                   00064813
+   000037                                                                                 00064902
+   000038                 WORKING-STORAGE SECTION.                                        00065013
+   000039                 01 WS-SWITCHES.                                                 00065118
+   000040                    05 MS-EOF-SWITCH                PIC X.                       00065213
+   000041                       88 MS-MASTER-EOF             VALUE 'E'.                   00065313
+   000042                       88 MS-MASTER-NOT-EOF         VALUE 'N'.                   00065513
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 12/12/2018  Time 23:50:39   Page     4
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000043                    05 TS-EOF-SWITCH                PIC X.                       00065713
+   000044                       88 TS-TRANS-EOF              VALUE 'E'.                   00065913
+   000045                       88 TS-TRANS-NOT-EOF          VALUE 'N'.                   00066122
+   000046                    05 MS-READ-MSTR-SWITCH          PIC X.                       00066313
+   000047                       88 MS-READ-MASTER            VALUE 'T'.                   00066513
+   000048                       88 MS-NOT-READ-MASTER        VALUE 'F'.                   00066622
+   000049                    05 TS-READ-TRANS-SWITCH         PIC X.                       00067022
+   000050                       88 TS-READ-TRANS             VALUE 'T'.                   00067222
+   000051                       88 TS-NOT-READ-TRANS         VALUE 'F'.                   00067422
+   000052                    05 WS-TRANS-PROC-SWITCH         PIC X.                       00068613
+   000053                       88 WS-TRANS-PROC             VALUE 'P'.                   00068813
+   000054                       88 WS-TRANS-NOT-PROC         VALUE 'N'.                   00069013
+   000055                                                                                 00069102
+   000056                 01 AW-ARITHMETIC-WORK-AREAS.                                    00069223
+   000057                    05 AW-CHARGE-ACCUM              PIC 9(5)V99.                 00069323
+   000058                    05 AW-EVENT-COUNTER             PIC 9(3).                    00069413
+   000059                                                                                 00069502
+   000060                 01 CR-CPR-RECORD.                                               00069613
+   000061                    05 CR-FIRST-NAME                PIC X(12).                   00069713
+   000062                    05 CR-LAST-NAME                 PIC X(12).                   00069813
+   000063                    05 CR-PHONE-NUMBER              PIC X(10).                   00070013
+   000064                    05 CR-ACCOUNT-NUMBER            PIC X(6).                    00070213
+   000065                    05 CR-ACCOUNT-CHARGE            PIC 9(3)V99.                 00070513
+   000066                                                                                 00070602
+   000067                 01 CT-TRANS-REC.                                                00070813
+   000068                    05 CT-ACCOUNT-NUMBER            PIC X(6).                    00070913
+   000069                    05 CT-ACCOUNT-CHARGE            PIC 9(5).                    00071030
+   000070                                                                                 00071102
+   000071                 01 CL-CPR-LINE.                                                 00071613
+   000072                    05                              PIC X VALUE SPACES.          00071713
+   000073                    05 CL-FIRST-NAME                PIC X(12).                   00071913
+   000074                    05                              PIC X VALUE SPACES.          00072113
+   000075                    05 CL-LAST-NAME                 PIC X(12).                   00072320
+   000076                    05                              PIC X VALUE SPACES.          00072513
+   000077                    05 CL-PHONE-NUMBER              PIC X(10).                   00072713
+   000078                    05                              PIC X VALUE SPACES.          00072913
+   000079                    05 CL-ACCOUNT-NUMBER            PIC X(6).                    00073113
+   000080                    05                              PIC X VALUE SPACES.          00073313
+   000081                    05 CL-ACCOUNT-CHARGE            PIC 9(5).                    00073530
+   000082                                                                                 00073602
+   000083                 01 RL-REPORT-LINE.                                              00073713
+   000084                    05 PIC X(10) VALUE SPACES.                                   00073816
+   000085                    05 RL-ACCOUNT-NUMBER            PIC X(6).                    00074013
+   000086                    05 PIC X(3) VALUE SPACES.                                    00074216
+   000087                    05 RL-ACCOUNT-CHARGE            PIC $ZZ9.99.                 00074413
+   000088                                                                                 00074502
+   000089                 01 ER-ERROR-LINE.                                               00074613
+   000090                    05 PIC X(17) VALUE 'ERROR IN RECORD: '.                      00074821
+   000091                    05 ER-ERROR-REC  PIC X(13).                                  00075013
+   000092                                                                                 00075102
+   000093                 01 TL-TOTAL-LINE.                                               00075213
+   000094                    05 PIC X(2) VALUE SPACES.                                    00075316
+   000095                    05 PIC X(15) VALUE 'TOTAL EVENTS   '.                        00075420
+   000096                    05 TL-TOTAL-EVENTS PIC ZZ9.                                  00075513
+   000097                    05 PIC X(2) VALUE SPACES.                                    00075616
+   000098                    05 PIC X(15) VALUE 'TOTAL CHARGES  '.                        00075716
+   000099                    05 TL-TOTAL-FEES PIC $ZZ9.99.                                00075813
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 12/12/2018  Time 23:50:39   Page     5
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000100                                                                                 00075936
+   000101                 01 H0-HEADINGS.                                                 00076036
+   000102                    05 PIC X(8) VALUE SPACES.                                    00076136
+   000103                    05 PIC X(32) VALUE 'COLUMBIA PHONE REPAIR INDIVIDUAL'.       00076236
+   000104                    05 PIC X(11) VALUE 'COST REPORT'.                            00076336
+   000105                    05 PIC X(5) VALUE SPACES.                                    00076436
+   000106                                                                                 00076537
+   000107                 01 H1-HEADINGS.                                                 00076636
+   000108                    05 PIC X(10) VALUE SPACES.                                   00076736
+   000109                    05 PIC X(4) VALUE 'NAME'.                                    00076836
+   000110                    05 PIC X(22) VALUE SPACES.                                   00076936
+   000111                    05 PIC X(5) VALUE 'COST '.                                   00077036
+   000112                                                                                 00077136
+   000113                 01 H2-HEADINGS.                                                 00077236
+   000114                    05 PIC X(2) VALUE SPACES.                                    00077336
+   000115                    05 H2-FIRST-NAME          PIC X(12).                         00077436
+   000116                    05 PIC X VALUE SPACE.                                        00077536
+   000117                    05 H2-LAST-NAME                   PIC X(12).                 00077636
+   000118                    05 PIC X(9) VALUE SPACES.                                    00077736
+   000119                    05 H2-COST                PIC ZZ9.99.                        00077836
+   000120                                                                                 00077937
+   000121                PROCEDURE DIVISION.                                              00078002
+   000122                000-PRINT-EVENT-REPORT.                                          00078102
+   000123                    OPEN INPUT CPR-FILE                                          00078202
+   000124                               CPR-TRANS                                         00078302
+   000125                         OUTPUT CPR-NEW-MASTER                                   00078402
+   000126                                CPR-REPORT                                       00078502
+   000127                                CPR-ERROR                                        00078602
+   000128                    PERFORM 100-INITIALIZE                                       00078702
+   000129                    PERFORM UNTIL MS-MASTER-EOF AND                              00078802
+   000130                                  TS-TRANS-EOF                                   00078902
+   000131      1                PERFORM 200-GET-NEXT-RECORD                               00079002
+   000132      1                PERFORM 300-PROCESS-RECORD                                00079102
+   000133                    END-PERFORM                                                  00079223
+   000134                    CLOSE CPR-FILE                                               00079323
+   000135                          CPR-TRANS                                              00079423
+   000136                          CPR-NEW-MASTER                                         00079523
+   000137                          CPR-REPORT                                             00079623
+   000138                          CPR-ERROR                                              00079723
+   000139                    STOP RUN.                                                    00079823
+   000140                                                                                 00079923
+   000141                 100-INITIALIZE.                                                 00080025
+   000142                     SET MS-READ-MASTER                                          00080109
+   000143                         TS-READ-TRANS                                           00080209
+   000144                         MS-MASTER-NOT-EOF                                       00080309
+   000145                         TS-TRANS-NOT-EOF TO TRUE                                00080409
+   000146                     INITIALIZE AW-ARITHMETIC-WORK-AREAS                         00080509
+   000147                     .                                                           00080609
+   000148                                                                                 00080702
+   000149                 200-GET-NEXT-RECORD.                                            00080809
+   000150                     EVALUATE MS-READ-MASTER ALSO TS-READ-TRANS                  00080924
+   000151                      WHEN TRUE ALSO TRUE                                        00081002
+   000152      1                  PERFORM 800-READ-MASTER-RECORD                          00081102
+   000153      1                  PERFORM 820-READ-TRANS-RECORD                           00081202
+   000154      1                  SET MS-NOT-READ-MASTER                                  00081302
+   000155      1                      TS-NOT-READ-TRANS                                   00081402
+   000156      1                      WS-TRANS-NOT-PROC TO TRUE                           00081502
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 12/12/2018  Time 23:50:39   Page     6
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000157                      WHEN TRUE ALSO FALSE                                       00081602
+   000158      1                  PERFORM 800-READ-MASTER-RECORD                          00081702
+   000159      1                  SET MS-NOT-READ-MASTER                                  00081802
+   000160      1                      WS-TRANS-NOT-PROC TO TRUE                           00081928
+   000161                      WHEN FALSE ALSO TRUE                                       00082002
+   000162      1                  PERFORM 820-READ-TRANS-RECORD                           00082102
+   000163      1                  SET TS-NOT-READ-TRANS TO TRUE                           00082202
+   000164                      END-EVALUATE                                               00082328
+   000165                    .                                                            00082402
+   000166                                                                                 00082502
+   000167                300-PROCESS-RECORD.                                              00082627
+   000168                    EVALUATE                                                     00082727
+   000169                             TS-TRANS-EOF ALSO   MS-MASTER-EOF                   00082827
+   000170                      WHEN   FALSE        ALSO   FALSE                           00082927
+   000171      1             EVALUATE TRUE                                                00083027
+   000172      1               WHEN CR-ACCOUNT-NUMBER = CT-ACCOUNT-NUMBER                 00083127
+   000173      2                 PERFORM 400-PROCESS-TRANS                                00083227
+   000174      2                 SET TS-READ-TRANS                                        00083327
+   000175      2                     WS-TRANS-PROC TO TRUE                                00083427
+   000176                                                                                 00083502
+   000177      1               WHEN CR-ACCOUNT-NUMBER < CT-ACCOUNT-NUMBER                 00083627
+   000178      2                 IF WS-TRANS-PROC                                         00083727
+   000179      3                   PERFORM 500-PROCESS-MASTER                             00083827
+   000180      2                 ELSE                                                     00083927
+   000181      3                   PERFORM 550-PROCESS-UNMATCHED-MASTER                   00084027
+   000182      2                 END-IF                                                   00084127
+   000183      2                 SET MS-READ-MASTER TO TRUE                               00084227
+   000184      1               WHEN CR-ACCOUNT-NUMBER > CT-ACCOUNT-NUMBER                 00084327
+   000185      2                 PERFORM 600-PROCESS-UNMATCHED-TRANS                      00084427
+   000186      2                 SET TS-READ-TRANS TO TRUE                                00084527
+   000187      1             END-EVALUATE                                                 00084627
+   000188                                                                                 00084702
+   000189                      WHEN     TRUE   ALSO   FALSE                               00084827
+   000190      1                 IF WS-TRANS-PROC                                         00084927
+   000191      2                   PERFORM 500-PROCESS-MASTER                             00085027
+   000192      1                 ELSE                                                     00085127
+   000193      2                   PERFORM 550-PROCESS-UNMATCHED-MASTER                   00085227
+   000194      1                 END-IF                                                   00085327
+   000195      1                 SET MS-READ-MASTER TO TRUE                               00085427
+   000196                      WHEN    FALSE   ALSO  TRUE                                 00085527
+   000197      1                 PERFORM 600-PROCESS-UNMATCHED-TRANS                      00085627
+   000198      1                 SET TS-READ-TRANS TO TRUE                                00085727
+   000199                    END-EVALUATE                                                 00085827
+   000200                    .                                                            00085927
+   000201                400-PROCESS-TRANS.                                               00086027
+   000202                     IF WS-TRANS-NOT-PROC                                        00086127
+   000203      1                PERFORM 900-PRINT-HEADINGS                                00086227
+   000204      1                INITIALIZE AW-ARITHMETIC-WORK-AREAS                       00086327
+   000205                     END-IF                                                      00086427
+   000206                     ADD 1 TO AW-EVENT-COUNTER                                   00086527
+   000207                     ADD CT-ACCOUNT-CHARGE TO AW-CHARGE-ACCUM                    00086627
+   000208                     MOVE CT-ACCOUNT-CHARGE TO RL-ACCOUNT-CHARGE                 00086727
+   000209                     MOVE RL-REPORT-LINE TO CPR-REPORT-LINE.                     00086831
+   000210                     WRITE CPR-REPORT-LINE                                       00086931
+   000211                     .                                                           00087027
+   000212                 500-PROCESS-MASTER.                                             00087127
+   000213                     IF WS-TRANS-PROC                                            00087227
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 12/12/2018  Time 23:50:39   Page     7
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000214      1                 PERFORM 520-PRINT-TOTAL-LINE                             00087327
+   000215                     END-IF                                                      00087427
+   000216                     ADD AW-CHARGE-ACCUM TO CT-ACCOUNT-CHARGE                    00087527
+   000217                     MOVE CR-CPR-RECORD TO CPR-REPORT-LINE                       00087631
+   000218                     WRITE CPR-REPORT-LINE                                       00087731
+   000219                     .                                                           00087827
+   000220                 520-PRINT-TOTAL-LINE.                                           00087927
+   000221                     MOVE AW-CHARGE-ACCUM TO TL-TOTAL-FEES                       00088027
+   000222                     MOVE AW-EVENT-COUNTER TO TL-TOTAL-EVENTS                    00088127
+   000223                     MOVE TL-TOTAL-LINE TO CPR-REPORT-LINE                       00088232
+   000224                     WRITE CPR-REPORT-LINE                                       00088332
+   000225                           AFTER ADVANCING 2 LINES                               00088427
+   000226                     .                                                           00088527
+   000227                 550-PROCESS-UNMATCHED-MASTER.                                   00088627
+   000228                     MOVE CR-CPR-RECORD TO CPR-REPORT-LINE                       00088732
+   000229                     WRITE CPR-REPORT-LINE                                       00088832
+   000230                     .                                                           00088927
+   000231                 600-PROCESS-UNMATCHED-TRANS.                                    00089027
+   000232                     MOVE CT-TRANS-REC TO ER-ERROR-REC                           00089127
+   000233                     MOVE ER-ERROR-LINE TO CPR-ERROR-LINE                        00089227
+   000234                     WRITE CPR-ERROR-LINE                                        00089327
+   000235                           AFTER ADVANCING 1 LINE                                00089427
+   000236                     .                                                           00089527
+   000237                 800-READ-MASTER-RECORD.                                         00089627
+   000238                     READ CPR-FILE                                               00089727
+   000239                          INTO CR-CPR-RECORD                                     00089827
+   000240                     AT END                                                      00089927
+   000241      1                 SET MS-MASTER-EOF TO TRUE                                00090027
+   000242                     END-READ                                                    00090133
+   000243                     .                                                           00090227
+   000244                 820-READ-TRANS-RECORD.                                          00090334
+   000245                     READ CPR-TRANS                                              00090427
+
+ ==000245==> IGYPA3043-E Data-item "CPR-TRANS-REC (ALPHANUMERIC)" and record "CPR-TRANS-REC
+                         (ALPHANUMERIC)" had overlapping storage.  Movement of data may not occur
+                         at execution time.
+
+   000246                          INTO CPR-TRANS-REC                                     00090527
+   000247                     AT END                                                      00090627
+   000248      1                 SET TS-TRANS-EOF TO TRUE                                 00090727
+   000249                     END-READ                                                    00090827
+   000250                     .                                                           00090927
+   000251                 900-PRINT-HEADINGS.                                             00091035
+   000252                     MOVE H0-HEADINGS TO CPR-REPORT-LINE                         00091137
+   000253                     WRITE CPR-REPORT-LINE                                       00091237
+   000254                     MOVE CR-FIRST-NAME TO CL-FIRST-NAME                         00091335
+   000255                     MOVE CR-LAST-NAME TO CL-LAST-NAME                           00091435
+   000256                     MOVE CR-PHONE-NUMBER TO CL-PHONE-NUMBER                     00091535
+   000257                     MOVE CR-ACCOUNT-NUMBER TO CL-ACCOUNT-NUMBER                 00091635
+   000258                     MOVE CR-ACCOUNT-CHARGE TO CL-ACCOUNT-CHARGE                 00091735
+   000259                     WRITE CPR-REPORT-LINE                                       00091837
+   000260                           AFTER ADVANCING 2 LINES                               00091935
+   000261                     MOVE H1-HEADINGS TO CPR-REPORT-LINE                         00092037
+   000262                     WRITE CPR-REPORT-LINE                                       00092137
+   000263                           AFTER ADVANCING 2 LINES                               00092235
+   000264                     MOVE H2-HEADINGS TO CPR-REPORT-LINE                         00092339
+   000265                     WRITE CPR-REPORT-LINE                                       00092439
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 12/12/2018  Time 23:50:39   Page     8
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000266                           AFTER ADVANCING 2 LINES                               00092535
+   000267                     .                                                           00092635
+   000268                                                                                 00092702
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 12/12/2018  Time 23:50:39   Page     9
+0LineID  Message code  Message text
+
+     23  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CPR-FILE".
+
+     26  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CPR-TRANS".
+
+     29  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CPR-NEW-MASTER".
+
+     32  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CPR-REPORT".
+
+     35  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CPR-ERROR".
+
+    245  IGYPA3043-E   Data-item "CPR-TRANS-REC (ALPHANUMERIC)" and record "CPR-TRANS-REC (ALPHANUMERIC)" had overlapping storage.
+                       Movement of data may not occur at execution time.
+-Messages    Total    Informational    Warning    Error    Severe    Terminating
+0Printed:       6           5                        1
+-* Statistics for COBOL program CPRPRICE:
+ *    Source records = 268
+ *    Data Division statements = 53
+ *    Procedure Division statements = 71
+0End of compilation 1,  program CPRPRICE,  highest severity 8.
+0Return code 8
+ LAWERANCE   HEMINGER    3
+ JEANETTE    ROBERTSON   6
+ JENNA       SAMON       8
+ KAITLYN     JOYNER      2
+ MARY        LAMB        2
+ FRANCHESKA  ASBURY      7
+ HANNAH      BAKER       7
+ SARAH       JENNINGS    8
+ SALLY       RIDER       9
+ BART        FRAMPTON    5
+ YOLANDA     TAYLOR      6
+ CAITLYN     NOSAL       6
+ REBEKAH     JACKSON     4
+ MARK        HAMEL       9
+ JOHN        FRESCA      8
+ SUSAN       COOLEY      8
+ JODY        RIDER       2
+ COURTNEY    SINCHAK     8
+ LIL         TUNECHIEF   2
+ ANGELA      WOOD        8
+ KAJUANZA    WASHINGTON  8
+ BARBIE      FITZGERALD  8
+ JOHN        BROWNING    7
+ JACQUELYN   STOUDEMIRE  3
+ PETER       PARKER      7
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+ ERROR IN RECORD:            
+

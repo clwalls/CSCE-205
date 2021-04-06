@@ -1,0 +1,673 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R
+0
+ 00.17.54 JOB09697 ---- WEDNESDAY, 07 NOV 2018 ----
+ 00.17.54 JOB09697  IRR010I  USERID KC03CF1  IS ASSIGNED TO THIS JOB.
+ 00.17.54 JOB09697  IEF677I WARNING MESSAGE(S) FOR JOB KC03CF1A ISSUED
+ 00.17.54 JOB09697  ICH70001I KC03CF1  LAST ACCESS AT 00:16:50 ON WEDNESDAY, NOVEMBER 7, 2018
+ 00.17.54 JOB09697  $HASP373 KC03CF1A STARTED - INIT 1    - CLASS A        - SYS S0W1
+ 00.17.55 JOB09697  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 00.17.55 JOB09697  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 00.17.55 JOB09697  -KC03CF1A                      00    467 ******    .00     .0   1079   0      0      0      0     0
+ 00.17.55 JOB09697  -KC03CF1A                      00    193 ******    .00     .0    609   0      0      0      0     0
+ 00.17.55 JOB09697  -KC03CF1A                      00    968 ******    .00     .0    641   0      0      0      0     0
+ 00.17.55 JOB09697  -KC03CF1A ENDED.  NAME-WALLS                TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 00.17.55 JOB09697  $HASP395 KC03CF1A ENDED
+0------ JES2 JOB STATISTICS ------
+-  07 NOV 2018 JOB EXECUTION DATE
+-          325 CARDS READ
+-          672 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           47 SYSOUT SPOOL KBYTES
+-         0.02 MINUTES EXECUTION TIME
+         1 //KC03CF1A JOB 1,WALLS,LINES=(5,CANCEL),NOTIFY=KC03CF1,                 JOB09697
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020000
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030000
+           // PARM.COBOL='NOX'                                                     00040000
+        26 //SYSIN DD *                                                            00050000
+        27 //SYSIN     DD *               GENERATED STATEMENT
+           //* REPLACE THE ? IN THE DSN BELOW WITH YOUR GROUP NUMBER               00101800
+        42 //GO.FILEIN DD DSN=KC02580.GR1PR3.DAT,DISP=SHR                          00101900
+        43 //GO.FILEOUT DD SYSOUT=A                                                00102000
+        44 //GO.SYSOUT DD SYSOUT=A                                                 00103000
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        36 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED
+ ICH70001I KC03CF1  LAST ACCESS AT 00:16:50 ON WEDNESDAY, NOVEMBER 7, 2018
+ IEF142I KC03CF1A COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2018311.0017
+ IEF032I STEP/COBOL   /STOP  2018311.0017
+         CPU:     0 HR  00 MIN  00.03 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:  8892K  SYS:   312K  EXT:  1579956K  SYS:    12036K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03CF1A LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2018311.0017
+ IEF032I STEP/LKED    /STOP  2018311.0017
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    88K  SYS:   296K  EXT:     1640K  SYS:    11984K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03CF1A GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2018311.0017
+ IEF032I STEP/GO      /STOP  2018311.0017
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.01 SEC
+         VIRT:   120K  SYS:   308K  EXT:     2948K  SYS:    12028K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03CF1A/START 2018311.0017
+ IEF033I  JOB/KC03CF1A/STOP  2018311.0017
+         CPU:     0 HR  00 MIN  00.06 SEC    SRB:     0 HR  00 MIN  00.01 SEC
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 11/07/2018  Time 00:17:54   Page     1
+0Invocation parameters:
+  NOX
+0Options in effect:
+  NOADATA
+    ADV
+    QUOTE
+    ARITH(COMPAT)
+  NOAWO
+  NOBLOCK0
+    BUFSIZE(4096)
+  NOCICS
+    CODEPAGE(1140)
+  NOCOMPILE(S)
+  NOCURRENCY
+    DATA(31)
+  NODATEPROC
+    DBCS
+  NODECK
+  NODIAGTRUNC
+  NODLL
+  NODUMP
+  NODYNAM
+  NOEXIT
+  NOEXPORTALL
+  NOFASTSRT
+    FLAG(I,I)
+  NOFLAGMIG4
+  NOFLAGSTD
+    INTDATE(ANSI)
+    LANGUAGE(EN)
+  NOLIB
+    LINECOUNT(60)
+  NOLIST
+  NOMAP
+  NOMDECK
+  NONAME
+    NSYMBOL(NATIONAL)
+  NONUMBER
+    NUMPROC(NOPFD)
+    OBJECT
+  NOOFFSET
+  NOOPTIMIZE
+    OUTDD(SYSOUT)
+    PGMNAME(COMPAT)
+    RENT
+    RMODE(AUTO)
+    SEQUENCE
+    SIZE(MAX)
+    SOURCE
+    SPACE(1)
+  NOSQL
+    SQLCCSID
+  NOSSRANGE
+  NOTERM
+  NOTEST
+  NOTHREAD
+    TRUNC(STD)
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 11/07/2018  Time 00:17:54   Page     2
+0 NOVBREF
+  NOWORD
+    XMLPARSE(XMLSS)
+  NOXREF
+    YEARWINDOW(1900)
+    ZWB
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 11/07/2018  Time 00:17:54   Page     3
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000001                IDENTIFICATION DIVISION.                                         00060000
+   000002                PROGRAM-ID.    CPRPRICE.                                         00061000
+   000003               *     WALLS 10/8/2018                                             00061100
+   000004               *     THIS PROGRAM PRINTS A JOB ORDER LIST WITH PRICES            00061200
+   000005                                                                                 00061300
+   000006                                                                                 00061400
+   000007                ENVIRONMENT DIVISION.                                            00061500
+   000008                                                                                 00061600
+   000009                INPUT-OUTPUT SECTION.                                            00061700
+   000010                                                                                 00061800
+   000011                FILE-CONTROL.                                                    00061900
+   000012                    SELECT CUSTOMER-FILE                                         00062000
+   000013                        ASSIGN TO FILEIN.                                        00062100
+   000014                    SELECT EARNINGS-REPORT                                       00062201
+   000015                        ASSIGN TO FILEOUT.                                       00062300
+   000016                                                                                 00062400
+   000017                                                                                 00062500
+   000018                DATA DIVISION.                                                   00062600
+   000019                                                                                 00062700
+   000020                FILE SECTION.                                                    00062800
+   000021                                                                                 00062900
+   000022                FD CUSTOMER-FILE.                                                00063000
+
+ ==000022==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUSTOMER-FILE".
+
+   000023                01 CUSTOMER-RECORD                  PIC X(51).                   00063200
+   000024                                                                                 00063400
+   000025                FD EARNINGS-REPORT.                                              00063501
+
+ ==000025==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "EARNINGS-REPORT".
+
+   000026                01 SALES-LINE                       PIC X(80).                   00063702
+   000027                                                                                 00063900
+   000028                WORKING-STORAGE SECTION.                                         00064000
+   000029                                                                                 00064100
+   000030                01 PROGRAM-SWITCHES.                                             00064200
+   000031                   05 S1-END-OF-FILE-SWITCH        PIC X.                        00064300
+   000032                      88  S1-END-OF-FILE           VALUE 'E'.                    00064400
+   000033                      88  S1-NOT-END-OF-FILE       VALUE 'N'.                    00064500
+   000034                   05 S2-FIRST-RECORD-SWITCH       PIC X.                        00064600
+   000035                      88  S2-FIRST-RECORD          VALUE 'F'.                    00064700
+   000036                      88  S2-NOT-FIRST-RECORD      VALUE 'N'.                    00064800
+   000037                                                                                 00064900
+   000038                01 RC-REPORT-CONTROLS.                                           00065000
+   000039                   05  RC-PAGE-COUNT               PIC 9(4).                     00065100
+   000040                   05  RC-LINES-PER-PAGE           PIC 9(2)  VALUE 34.           00065200
+   000041                   05  RC-LINES-USED               PIC 9(2).                     00065300
+   000042                   05  RC-LINE-SPACING             PIC 9(2).                     00065400
+   000043                   05  RC-PREVIOUS-YEAR            PIC X(4).                     00065500
+   000044                   05  RC-PREVIOUS-TYPE            PIC X(6).                     00065600
+   000045                                                                                 00065700
+   000046                01 WA-WORK-AREAS.                                                00066600
+   000047                   05  WA-DATE-WORK                PIC 9(6).                     00067700
+   000048                                                                                 00067800
+   000049                01 AC-TOTAL-ACCUMULATORS.                                        00067900
+   000050                   05  AC-TOTAL-YEAR               PIC 9(7).                     00068000
+   000051                   05  AC-TOTAL-LAPTOP             PIC 9(7).                     00068119
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 11/07/2018  Time 00:17:54   Page     4
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000052                   05  AC-TOTAL-PHONE              PIC 9(7).                     00068219
+   000053                   05  AC-TOTAL-SALES              PIC 9(7).                     00068302
+   000054                   05  AC-TOTAL-TYPE               PIC 9(7).                     00068422
+   000055                                                                                 00068500
+   000056                01 CR-CUSTOMER-RECORD.                                           00068609
+   000057                   05  FILLER                      PIC X(34).                    00068708
+   000058                   05  CR-MONTH                    PIC X(2).                     00068808
+   000059                   05  FILLER                      PIC X(2).                     00068908
+   000060                   05  CR-YEAR                     PIC X(2).                     00069000
+   000061                   05  CR-TYPE                     PIC X(6).                     00069100
+   000062                   05  CR-SALES                    PIC 9(3).                     00069249
+   000063                                                                                 00069300
+   000064                01 H1-HEADING-LINE-1.                                            00069400
+   000065                   05  PIC X(20) VALUE ' YEARLY SALES REPORT'.                   00069505
+   000066                   05  PIC X(45) VALUE SPACES.                                   00069605
+   000067                   05  PIC X(5)  VALUE 'PAGE '.                                  00069700
+   000068                   05  H1-PAGE-NBR                 PIC ZZZ9.                     00069800
+   000069                                                                                 00069900
+   000070                01 H2-HEADING-LINE-2.                                            00070000
+   000071                   05  PIC X(66) VALUE SPACES.                                   00070105
+   000072                   05  H2-MONTH                    PIC 9(2).                     00070201
+   000073                   05  PIC X     VALUE '/'.                                      00070301
+   000074                   05  H2-DAY                      PIC 9(2).                     00070401
+   000075                   05  PIC X     VALUE '/'.                                      00070501
+   000076                   05  H2-YEAR                     PIC 9(2).                     00070601
+   000077                                                                                 00070701
+   000078                01 H3-HEADING-LINE-3.                                            00070801
+   000079                   05  PIC X(22) VALUE ' BY TYPE WITHIN A YEAR'.                 00070901
+   000080                   05  PIC X(58) VALUE SPACES.                                   00071001
+   000081                                                                                 00071101
+   000082                01 H4-HEADING-LINE-4.                                            00071201
+   000083                   05  PIC X(31) VALUE SPACES.                                   00071301
+   000084                   05  H4-YEAR                     PIC X(4).                     00071401
+   000085                   05  PIC X(45) VALUE SPACES.                                   00071501
+   000086                                                                                 00071601
+   000087                01 H5-HEADING-LINE-5.                                            00071701
+   000088                   05  PIC X(30) VALUE ' YEAR      TYPE         MONTH '.         00071828
+   000089                   05  PIC X(15) VALUE '         SALES'.                         00071902
+   000090                   05  PIC X(35) VALUE SPACES.                                   00072001
+   000091                                                                                 00072101
+   000092                01 DL-DETAIL-LINE.                                               00072201
+   000093                   05  PIC X(1)  VALUE SPACE.                                    00072301
+   000094                   05  DL-YEAR                     PIC X(4).                     00072401
+   000095                   05  PIC X(6)  VALUE SPACES.                                   00072501
+   000096                   05  DL-TYPE                     PIC X(6).                     00072601
+   000097                   05  PIC X(7) VALUE SPACES.                                    00072708
+   000098                   05  DL-MONTH                    PIC X(10).                    00072808
+   000099                   05  PIC X(6) VALUE SPACES.                                    00072908
+   000100                   05  DL-SALES                    PIC $ZZZZ9.99.                00073015
+   000101                   05  PIC X(30) VALUE SPACES.                                   00073101
+   000102                                                                                 00073201
+   000103                01 CT-CONTROL-TOTAL-LINE.                                        00073301
+   000104                   05  PIC X(21) VALUE SPACES.                                   00073401
+   000105                   05  CT-TOTAL-DESCRIPTION        PIC X(19).                    00073501
+   000106                   05  CT-TOTAL-THIS-TYPE          PIC $ZZZZ9.99.                00073614
+   000107                                                                                 00073901
+   000108                   PROCEDURE DIVISION.                                           00074300
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 11/07/2018  Time 00:17:54   Page     5
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000109                                                                                 00074400
+   000110                   000-PRINT-SALES-REPORT.                                       00074501
+   000111                                                                                 00074607
+   000112                       OPEN INPUT CUSTOMER-FILE                                  00074700
+   000113                           OUTPUT EARNINGS-REPORT                                00074801
+   000114                       PERFORM 100-INITIALIZE-VARIABLE-FIELDS                    00075000
+   000115                                                                                 00075101
+   000116                       PERFORM UNTIL S1-END-OF-FILE                              00075601
+   000117                                                                                 00075700
+   000118      1                    READ CUSTOMER-FILE                                    00075801
+   000119      1                            INTO CR-CUSTOMER-RECORD                       00075909
+   000120      1                      AT END                                              00076000
+   000121      2                         SET S1-END-OF-FILE TO TRUE                       00076101
+   000122      2                         PERFORM 250-PROCESS-BREAK                        00076201
+   000123      2                         PERFORM 700-PRINT-REPORT-TOTAL-LINE              00076332
+   000124      1                      NOT AT END                                          00076401
+   000125      2                         PERFORM 250-PROCESS-BREAK                        00076501
+   000126      2                         PERFORM 200-PROCESS-DETAIL-RECORD                00076601
+   000127      1                    END-READ                                              00076701
+   000128                       END-PERFORM                                               00076801
+   000129                                                                                 00076907
+   000130                       CLOSE CUSTOMER-FILE                                       00077001
+   000131                             EARNINGS-REPORT                                     00077109
+   000132                       STOP RUN                                                  00077201
+   000133                       .                                                         00077300
+   000134                                                                                 00077501
+   000135                   100-INITIALIZE-VARIABLE-FIELDS.                               00077601
+   000136                       SET S1-NOT-END-OF-FILE TO TRUE                            00077701
+   000137                       SET S2-FIRST-RECORD TO TRUE                               00077801
+   000138                                                                                 00077901
+   000139                       ACCEPT WA-DATE-WORK FROM DATE                             00078001
+   000140                       MOVE WA-DATE-WORK(3:2) TO H2-MONTH                        00079001
+   000141                       MOVE WA-DATE-WORK(5:2) TO H2-DAY                          00080001
+   000142                       MOVE WA-DATE-WORK(1:2) TO H2-YEAR                         00081001
+   000143                                                                                 00082001
+   000144                       INITIALIZE AC-TOTAL-ACCUMULATORS                          00082101
+   000145                                  RC-PAGE-COUNT                                  00082201
+   000146                       .                                                         00082301
+   000147                   200-PROCESS-DETAIL-RECORD.                                    00082401
+   000148                       IF RC-LINES-USED >= RC-LINES-PER-PAGE                     00082501
+   000149      1                    PERFORM 870-PRINT-REPORT-HEADINGS                     00082601
+   000150                       END-IF                                                    00082701
+   000151                                                                                 00082802
+   000152                       PERFORM 600-PRINT-DETAIL-LINE                             00082902
+   000153                                                                                 00083002
+   000154                       IF CR-TYPE = 'PHONE '                                     00083129
+   000155      1                  ADD CR-SALES TO AC-TOTAL-PHONE                          00083229
+   000156                       END-IF                                                    00083329
+   000157                       IF CR-TYPE = 'LAPTOP'                                     00083429
+   000158      1                  ADD CR-SALES TO AC-TOTAL-LAPTOP                         00083529
+   000159                       END-IF                                                    00083629
+   000160                       MOVE SPACES TO DL-YEAR                                    00083802
+   000161                                      DL-TYPE                                    00083902
+   000162                       .                                                         00084002
+   000163                   250-PROCESS-BREAK.                                            00084102
+   000164                       EVALUATE TRUE                                             00084247
+   000165                       WHEN S2-FIRST-RECORD                                      00084347
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 11/07/2018  Time 00:17:54   Page     6
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000166      1                    MOVE CR-TYPE                                          00084447
+   000167      1                        TO RC-PREVIOUS-TYPE                               00084548
+   000168      1                           DL-TYPE                                        00084647
+   000169      1                    MOVE CR-YEAR TO RC-PREVIOUS-YEAR                      00084747
+   000170      1                                    DL-YEAR                               00084847
+   000171      1                    PERFORM 870-PRINT-REPORT-HEADINGS                     00084947
+   000172      1                    SET S2-NOT-FIRST-RECORD TO TRUE                       00085047
+   000173                       WHEN CR-YEAR NOT = RC-PREVIOUS-YEAR                       00085247
+   000174      1                    PERFORM 620-PROCESS-END-OF-YEAR                       00085302
+   000175                                                                                 00085402
+   000176                         WHEN CR-TYPE NOT = RC-PREVIOUS-TYPE                     00085502
+   000177      1                    EVALUATE CR-TYPE                                      00085642
+   000178      1                      WHEN 'PHONE'                                        00085743
+   000179      2                           PERFORM 612-PROCESS-END-OF-LAPTOP              00085842
+   000180      1                      WHEN 'LAPTOP'                                       00085942
+   000181      2                           PERFORM 611-PROCESS-END-OF-PHONE               00086042
+   000182      1                    END-EVALUATE                                          00086142
+   000183                                                                                 00086222
+   000184                       END-EVALUATE                                              00086702
+   000185                       .                                                         00086802
+   000186                                                                                 00086902
+   000187                   600-PRINT-DETAIL-LINE.                                        00087010
+   000188                       MOVE CR-MONTH TO DL-MONTH                                 00087108
+   000189                       MOVE CR-TYPE  TO DL-TYPE                                  00087227
+   000190                       MOVE CR-SALES TO DL-SALES                                 00087302
+   000191                       MOVE DL-DETAIL-LINE TO SALES-LINE                         00087402
+   000192                       PERFORM 890-WRITE-SALES-LINE                              00087502
+   000193                       MOVE 1 TO RC-LINE-SPACING                                 00087602
+   000194                       .                                                         00087702
+   000195                                                                                 00089426
+   000196                   611-PROCESS-END-OF-PHONE.                                     00089524
+   000197                       MOVE 'TOTAL FOR PHONE: ' TO CT-TOTAL-DESCRIPTION          00089625
+   000198                       MOVE AC-TOTAL-PHONE TO CT-TOTAL-THIS-TYPE                 00089726
+   000199                       MOVE CT-CONTROL-TOTAL-LINE TO SALES-LINE                  00089824
+   000200                       MOVE 2 TO RC-LINE-SPACING                                 00089924
+   000201                       PERFORM 890-WRITE-SALES-LINE                              00090024
+   000202                                                                                 00090120
+   000203                       MOVE 2 TO RC-LINE-SPACING                                 00090224
+   000204                                                                                 00090320
+   000205                       ADD AC-TOTAL-PHONE TO AC-TOTAL-YEAR                       00090424
+   000206                       IF S1-END-OF-FILE                                         00090524
+   000207      1                    MOVE CR-TYPE TO RC-PREVIOUS-TYPE                      00090624
+   000208      1                    MOVE CR-TYPE TO DL-TYPE                               00090824
+   000209                       END-IF                                                    00090924
+   000210                       .                                                         00091024
+   000211                                                                                 00091120
+   000212                   612-PROCESS-END-OF-LAPTOP.                                    00091224
+   000213                       MOVE 'TOTAL FOR LAPTOP: ' TO CT-TOTAL-DESCRIPTION         00091325
+   000214                       MOVE AC-TOTAL-LAPTOP TO CT-TOTAL-THIS-TYPE                00091426
+   000215                       MOVE CT-CONTROL-TOTAL-LINE TO SALES-LINE                  00091524
+   000216                       MOVE 2 TO RC-LINE-SPACING                                 00091624
+   000217                       PERFORM 890-WRITE-SALES-LINE                              00091724
+   000218                                                                                 00091820
+   000219                       MOVE 2 TO RC-LINE-SPACING                                 00091924
+   000220                                                                                 00092020
+   000221                       ADD AC-TOTAL-LAPTOP TO AC-TOTAL-YEAR                      00092124
+   000222                       IF S1-END-OF-FILE                                         00092224
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 11/07/2018  Time 00:17:54   Page     7
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000223      1                    MOVE CR-TYPE TO RC-PREVIOUS-TYPE                      00092324
+   000224      1                    MOVE CR-TYPE TO DL-TYPE                               00092524
+   000225                       END-IF                                                    00092624
+   000226                       .                                                         00092724
+   000227                                                                                 00092820
+   000228                   620-PROCESS-END-OF-YEAR.                                      00092911
+   000229                       PERFORM 611-PROCESS-END-OF-PHONE                          00093030
+   000230                       PERFORM 612-PROCESS-END-OF-LAPTOP                         00093130
+   000231                       MOVE 'TOTAL FOR YEAR:     ' TO CT-TOTAL-DESCRIPTION       00093211
+   000232                       MOVE AC-TOTAL-YEAR TO CT-TOTAL-THIS-TYPE                  00093311
+   000233                       MOVE CT-CONTROL-TOTAL-LINE TO SALES-LINE                  00093411
+   000234                       MOVE 2 TO RC-LINE-SPACING                                 00093511
+   000235                       PERFORM 890-WRITE-SALES-LINE                              00093611
+   000236                                                                                 00093704
+   000237                       MOVE 2 TO RC-LINE-SPACING                                 00093813
+   000238                       ADD AC-TOTAL-YEAR TO AC-TOTAL-SALES                       00093911
+   000239                       IF S1-NOT-END-OF-FILE                                     00094011
+   000240      1                    MOVE CR-YEAR TO RC-PREVIOUS-YEAR                      00094111
+   000241      1                    MOVE ZEROS TO AC-TOTAL-PHONE                          00094234
+   000242      1                    MOVE ZEROS TO AC-TOTAL-LAPTOP                         00094334
+   000243      1                    MOVE ZEROS TO AC-TOTAL-YEAR                           00094411
+   000244      1                    MOVE RC-LINES-PER-PAGE TO RC-LINES-USED               00094511
+   000245      1                    MOVE CR-YEAR TO DL-YEAR                               00094611
+   000246      1                    PERFORM 870-PRINT-REPORT-HEADINGS                     00094711
+   000247                       END-IF                                                    00094811
+   000248                       .                                                         00094911
+   000249                                                                                 00095004
+   000250                   700-PRINT-REPORT-TOTAL-LINE.                                  00095111
+   000251                       PERFORM 620-PROCESS-END-OF-YEAR                           00095240
+   000252                       MOVE 'REPORT TOTAL:     ' TO CT-TOTAL-DESCRIPTION         00095311
+   000253                       MOVE AC-TOTAL-SALES TO CT-TOTAL-THIS-TYPE                 00095411
+   000254                       MOVE CT-CONTROL-TOTAL-LINE TO SALES-LINE                  00095511
+   000255                       MOVE 3 TO RC-LINE-SPACING                                 00095611
+   000256                       PERFORM 890-WRITE-SALES-LINE                              00095712
+   000257                       .                                                         00095811
+   000258                   870-PRINT-REPORT-HEADINGS.                                    00095911
+   000259                       ADD 1 TO RC-PAGE-COUNT                                    00096011
+   000260                       MOVE RC-PAGE-COUNT TO H1-PAGE-NBR                         00096111
+   000261                                                                                 00096204
+   000262                       EVALUATE TRUE                                             00096311
+   000263                         WHEN CR-YEAR = '14'                                     00096411
+   000264      1                    MOVE '14' TO H4-YEAR                                  00096511
+   000265                         WHEN CR-YEAR = '15'                                     00096613
+   000266      1                    MOVE '15' TO H4-YEAR                                  00096713
+   000267                         WHEN CR-YEAR = '16'                                     00096813
+   000268      1                    MOVE '16' TO H4-YEAR                                  00096913
+   000269                         WHEN CR-YEAR = '17'                                     00097013
+   000270      1                    MOVE '17' TO H4-YEAR                                  00097113
+   000271                         WHEN CR-YEAR = '18'                                     00097213
+   000272      1                    MOVE '18' TO H4-YEAR                                  00097313
+   000273                       END-EVALUATE.                                             00097411
+   000274                                                                                 00097517
+   000275                                                                                 00097627
+   000276                                                                                 00097727
+   000277                                                                                 00097827
+   000278                                                                                 00097927
+   000279                                                                                 00098027
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 11/07/2018  Time 00:17:54   Page     8
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000280                                                                                 00098127
+   000281                                                                                 00098208
+   000282                       MOVE H1-HEADING-LINE-1 TO SALES-LINE                      00098311
+   000283                       PERFORM 880-WRITE-REPORT-TOP-LINE                         00098411
+   000284                                                                                 00098508
+   000285                       MOVE H2-HEADING-LINE-2 TO SALES-LINE                      00098611
+   000286                       MOVE 1 TO RC-LINE-SPACING                                 00098711
+   000287                       PERFORM 890-WRITE-SALES-LINE                              00098811
+   000288                                                                                 00098908
+   000289                       MOVE H3-HEADING-LINE-3 TO SALES-LINE                      00099011
+   000290                       MOVE 1 TO RC-LINE-SPACING                                 00099111
+   000291                       PERFORM 890-WRITE-SALES-LINE                              00099211
+   000292                                                                                 00099308
+   000293                       MOVE H4-HEADING-LINE-4 TO SALES-LINE                      00099411
+   000294                       MOVE 2 TO RC-LINE-SPACING                                 00099511
+   000295                       PERFORM 890-WRITE-SALES-LINE                              00099611
+   000296                                                                                 00099708
+   000297                       MOVE H5-HEADING-LINE-5 TO SALES-LINE                      00099811
+   000298                       MOVE 2 TO RC-LINE-SPACING                                 00099911
+   000299                       PERFORM 890-WRITE-SALES-LINE                              00100011
+   000300                                                                                 00100108
+   000301                       MOVE 2 TO RC-LINE-SPACING                                 00100211
+   000302                       .                                                         00100311
+   000303                   880-WRITE-REPORT-TOP-LINE.                                    00100411
+   000304                       WRITE SALES-LINE                                          00100511
+   000305                           AFTER ADVANCING PAGE                                  00100611
+   000306                       MOVE 1 TO RC-LINES-USED                                   00100711
+   000307                       .                                                         00100811
+   000308                                                                                 00100908
+   000309                   890-WRITE-SALES-LINE.                                         00101011
+   000310                       WRITE SALES-LINE                                          00101111
+   000311                           AFTER ADVANCING RC-LINE-SPACING                       00101211
+   000312                       ADD RC-LINE-SPACING TO RC-LINES-USED                      00101311
+   000313                       .                                                         00101411
+   000314                                                                                 00101504
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CPRPRICE  Date 11/07/2018  Time 00:17:54   Page     9
+0LineID  Message code  Message text
+
+     22  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUSTOMER-FILE".
+
+     25  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "EARNINGS-REPORT".
+-Messages    Total    Informational    Warning    Error    Severe    Terminating
+0Printed:       2           2
+-* Statistics for COBOL program CPRPRICE:
+ *    Source records = 314
+ *    Data Division statements = 47
+ *    Procedure Division statements = 111
+0End of compilation 1,  program CPRPRICE,  highest severity 0.
+0Return code 0
+1z/OS V2 R1 BINDER     00:17:54 WEDNESDAY NOVEMBER  7, 2018
+ BATCH EMULATOR  JOB(KC03CF1A) STEP(STEP2   ) PGM= IEWBLINK  PROCEDURE(LKED    )
+
+
+
+                                 *** O P E R A T I O N   S U M M A R Y   R E P O R T ***
+
+1PROCESSING OPTIONS:
+
+    ALIASES             NO
+    ALIGN2              NO
+    AMODE               UNSPECIFIED
+    CALL                YES
+    CASE                UPPER
+    COMPAT              UNSPECIFIED
+    COMPRESS            AUTO
+    DCBS                NO
+    DYNAM               NO
+    EXTATTR             UNSPECIFIED
+    EXITS:              NONE
+    FILL                NONE
+    GID                 UNSPECIFIED
+    HOBSET              NO
+    INFO                NO
+    LET                 04
+    LINECT              060
+    LIST                SUMMARY
+    LISTPRIV            NO
+    LONGPARM            NO
+    MAP                 NO
+    MAXBLK              032760
+    MODMAP              NO
+    MSGLEVEL            00
+    OVLY                NO
+    PRINT               YES
+    RES                 NO
+    REUSABILITY         UNSPECIFIED
+    RMODE               UNSPECIFIED
+    SIGN                NO
+    STORENX             NOREPLACE
+    STRIPCL             NO
+    STRIPSEC            NO
+    SYMTRACE
+    TERM                NO
+    TRAP                ON
+    UID                 UNSPECIFIED
+    UPCASE              NO
+    WKSPACE             000000K,000000K
+    XCAL                NO
+    XREF                NO
+    ***END OF OPTIONS***
+
+
+
+
+1SAVE OPERATION SUMMARY:
+
+    MEMBER NAME         GO
+    LOAD LIBRARY        SYS18311.T001754.RA000.KC03CF1A.GOSET.H01
+    PROGRAM TYPE        PROGRAM OBJECT(FORMAT 2)
+    VOLUME SERIAL       TEMP00
+    DISPOSITION         ADDED NEW
+    TIME OF SAVE        00.17.55  NOV  7, 2018
+
+
+1SAVE MODULE ATTRIBUTES:
+
+    AC                  000
+    AMODE                31
+    COMPRESSION         NONE
+    DC                  NO
+    EDITABLE            YES
+    EXCEEDS 16MB        NO
+    EXECUTABLE          YES
+    LONGPARM            NO
+    MIGRATABLE          YES
+    OL                  NO
+    OVLY                NO
+    PACK,PRIME          NO,NO
+    PAGE ALIGN          NO
+    REFR                NO
+    RENT                NO
+    REUS                NO
+    RMODE               ANY
+    SCTR                NO
+    SIGN                NO
+    SSI
+    SYM GENERATED       NO
+    TEST                NO
+    XPLINK              NO
+    MODULE SIZE (HEX)   00002240
+    DASD SIZE (HEX)     00008000
+
+1 ENTRY POINT AND ALIAS SUMMARY:
+
+  NAME:            ENTRY TYPE AMODE C_OFFSET CLASS NAME        STATUS
+
+  CPRPRICE          MAIN_EP      31 00000000 B_TEXT
+
+                          *** E N D   O F   O P E R A T I O N   S U M M A R Y   R E P O R T ***
+
+
+
+
+1z/OS V2 R1 BINDER     00:17:54 WEDNESDAY NOVEMBER  7, 2018
+ BATCH EMULATOR  JOB(KC03CF1A) STEP(STEP2   ) PGM= IEWBLINK  PROCEDURE(LKED    )
+ IEW2008I 0F03 PROCESSING COMPLETED.  RETURN CODE =  0.
+
+
+
+1----------------------
+ MESSAGE SUMMARY REPORT
+ ----------------------
+  TERMINAL MESSAGES      (SEVERITY = 16)
+  NONE
+
+  SEVERE MESSAGES        (SEVERITY = 12)
+  NONE
+
+  ERROR MESSAGES         (SEVERITY = 08)
+  NONE
+
+  WARNING MESSAGES       (SEVERITY = 04)
+  NONE
+
+  INFORMATIONAL MESSAGES (SEVERITY = 00)
+  2008
+
+
+  **** END OF MESSAGE SUMMARY REPORT ****
+
+1 YEARLY SALES REPORT                                             PAGE    1
+                                                                   11/07/18
+  BY TYPE WITHIN A YEAR
+0                               14
+0 YEAR      TYPE         MONTH          SALES
+0 14        PHONE        01              $  145.00
+0                     TOTAL FOR PHONE:   $  145.00
+0           LAPTOP       03              $  130.00
+0                     TOTAL FOR PHONE:   $  145.00
+0                     TOTAL FOR LAPTOP:  $  130.00
+0                     TOTAL FOR YEAR:    $  420.00
+1 YEARLY SALES REPORT                                             PAGE    2
+                                                                   11/07/18
+  BY TYPE WITHIN A YEAR
+0                               15
+0 YEAR      TYPE         MONTH          SALES
+0 15        LAPTOP       01              $  165.00
+            PHONE        04              $  122.00
+            PHONE        09              $  178.00
+            PHONE        12              $  221.00
+0                     TOTAL FOR PHONE:   $  521.00
+0                     TOTAL FOR LAPTOP:  $  165.00
+0                     TOTAL FOR YEAR:    $  686.00
+1 YEARLY SALES REPORT                                             PAGE    3
+                                                                   11/07/18
+  BY TYPE WITHIN A YEAR
+0                               16
+0 YEAR      TYPE         MONTH          SALES
+0 16        PHONE        05              $  201.00
+            PHONE        05              $  120.00
+            PHONE        07              $  150.00
+            PHONE        09              $  167.00
+0                     TOTAL FOR PHONE:   $  638.00
+0                     TOTAL FOR LAPTOP:  $    0.00
+0                     TOTAL FOR YEAR:    $  638.00
+1 YEARLY SALES REPORT                                             PAGE    4
+                                                                   11/07/18
+  BY TYPE WITHIN A YEAR
+0                               17
+0 YEAR      TYPE         MONTH          SALES
+0 17        LAPTOP       02              $  146.00
+            PHONE        02              $  157.00
+            PHONE        03              $  187.00
+            PHONE        04              $  197.00
+            PHONE        08              $  154.00
+            PHONE        10              $  167.00
+            PHONE        11              $  134.00
+0                     TOTAL FOR PHONE:   $  996.00
+0                     TOTAL FOR LAPTOP:  $  146.00
+0                     TOTAL FOR YEAR:    $ 1142.00
+1 YEARLY SALES REPORT                                             PAGE    5
+                                                                   11/07/18
+  BY TYPE WITHIN A YEAR
+0                               18
+0 YEAR      TYPE         MONTH          SALES
+0 18        PHONE        03              $  178.00
+0                     TOTAL FOR PHONE:   $  178.00
+0           LAPTOP       03              $  196.00
+            PHONE        04              $  112.00
+            PHONE        05              $  134.00
+            PHONE        05              $  208.00
+0                     TOTAL FOR PHONE:   $  632.00
+0           LAPTOP       08              $  108.00
+            PHONE        09              $  201.00
+0                     TOTAL FOR PHONE:   $  833.00
+0           LAPTOP       10              $  130.00
+0                     TOTAL FOR PHONE:   $  833.00
+0                     TOTAL FOR PHONE:   $  833.00
+0                     TOTAL FOR LAPTOP:  $  434.00
+0                     TOTAL FOR YEAR:    $ 3743.00
+-                     REPORT TOTAL:      $ 6629.00
+

@@ -1,0 +1,265 @@
+1                    J E S 2  J O B  L O G  --  S Y S T E M  S 0 W 1  --  N O D E  Z O S K C T R
+0
+ 19.54.48 JOB07377 ---- MONDAY,    01 OCT 2018 ----
+ 19.54.48 JOB07377  IRR010I  USERID KC03CF1  IS ASSIGNED TO THIS JOB.
+ 19.54.48 JOB07377  IEF677I WARNING MESSAGE(S) FOR JOB KC03CF1A ISSUED
+ 19.54.48 JOB07377  ICH70001I KC03CF1  LAST ACCESS AT 19:53:36 ON MONDAY, OCTOBER 1, 2018
+ 19.54.48 JOB07377  $HASP373 KC03CF1A STARTED - INIT 2    - CLASS A        - SYS S0W1
+ 19.54.48 JOB07377  -                                         --TIMINGS (MINS.)--            ----PAGING COUNTS---
+ 19.54.48 JOB07377  -JOBNAME  STEPNAME PROCSTEP    RC   EXCP    TCB    SRB  CLOCK   SERV  PG   PAGE   SWAP    VIO SWAPS
+ 19.54.48 JOB07377  -KC03CF1A                      00    434 ******    .00     .0    814   0      0      0      0     0
+ 19.54.48 JOB07377  -KC03CF1A                      00    169 ******    .00     .0    582   0      0      0      0     0
+ 19.54.49 JOB07377  -KC03CF1A                      00    122 ******    .00     .0    384   0      0      0      0     0
+ 19.54.49 JOB07377  -KC03CF1A ENDED.  NAME-WALLS                TOTAL TCB CPU TIME=   .00  TOTAL ELAPSED TIME=    .0
+ 19.54.49 JOB07377  $HASP395 KC03CF1A ENDED
+0------ JES2 JOB STATISTICS ------
+-  01 OCT 2018 JOB EXECUTION DATE
+-          102 CARDS READ
+-          264 SYSOUT PRINT RECORDS
+-            0 SYSOUT PUNCH RECORDS
+-           18 SYSOUT SPOOL KBYTES
+-         0.01 MINUTES EXECUTION TIME
+         1 //KC03CF1A JOB 1,WALLS,LINES=(5,CANCEL),NOTIFY=KC03CF1,                 JOB07377
+           // MSGLEVEL=(2,0),MSGCLASS=A                                            00020000
+         2 //STEP2 EXEC PROC=IGYWCLG,LNGPRFX='IGY420',                             00030000
+           // PARM.COBOL='NOX'                                                     00040000
+        26 //SYSIN DD *                                                            00050000
+        30 //LKED.SYSPRINT DD DUMMY                                                00070200
+           //* REPLACE THE ? IN THE DSN BELOW WITH YOUR GROUP NUMBER               00070300
+        41 //GO.FILEIN DD DSN=KC02580.GR1PR1.DAT,DISP=SHR                          00070404
+        42 //GO.FILEOUT DD SYSOUT=A                                                00070500
+        43 //GO.SYSOUT DD SYSOUT=A                                                 00071000
+  STMT NO. MESSAGE
+         2 IEFC001I PROCEDURE IGYWCLG WAS EXPANDED USING SYSTEM LIBRARY USER.PROCLIB
+        35 IEF686I DDNAME REFERRED TO ON DDNAME KEYWORD IN PRIOR STEP WAS NOT RESOLVED
+ ICH70001I KC03CF1  LAST ACCESS AT 19:53:36 ON MONDAY, OCTOBER 1, 2018
+ IEF142I KC03CF1A COBOL STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/COBOL   /START 2018274.1954
+ IEF032I STEP/COBOL   /STOP  2018274.1954
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:  8896K  SYS:   308K  EXT:  1578736K  SYS:    12244K
+         ATB- REAL:                    24K  SLOTS:                     0K
+              VIRT- ALLOC:       4M SHRD:       0M
+ IEF142I KC03CF1A LKED STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/LKED    /START 2018274.1954
+ IEF032I STEP/LKED    /STOP  2018274.1954
+         CPU:     0 HR  00 MIN  00.02 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:    88K  SYS:   300K  EXT:     1640K  SYS:    12172K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF142I KC03CF1A GO STEP2 - STEP WAS EXECUTED - COND CODE 0000
+ IEF373I STEP/GO      /START 2018274.1954
+ IEF032I STEP/GO      /STOP  2018274.1954
+         CPU:     0 HR  00 MIN  00.01 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+         VIRT:   120K  SYS:   384K  EXT:     2944K  SYS:    12320K
+         ATB- REAL:                     0K  SLOTS:                     0K
+              VIRT- ALLOC:       0M SHRD:       0M
+ IEF375I  JOB/KC03CF1A/START 2018274.1954
+ IEF033I  JOB/KC03CF1A/STOP  2018274.1954
+         CPU:     0 HR  00 MIN  00.05 SEC    SRB:     0 HR  00 MIN  00.00 SEC
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 10/01/2018  Time 19:54:48   Page     1
+0Invocation parameters:
+  NOX
+0Options in effect:
+  NOADATA
+    ADV
+    QUOTE
+    ARITH(COMPAT)
+  NOAWO
+  NOBLOCK0
+    BUFSIZE(4096)
+  NOCICS
+    CODEPAGE(1140)
+  NOCOMPILE(S)
+  NOCURRENCY
+    DATA(31)
+  NODATEPROC
+    DBCS
+  NODECK
+  NODIAGTRUNC
+  NODLL
+  NODUMP
+  NODYNAM
+  NOEXIT
+  NOEXPORTALL
+  NOFASTSRT
+    FLAG(I,I)
+  NOFLAGMIG4
+  NOFLAGSTD
+    INTDATE(ANSI)
+    LANGUAGE(EN)
+  NOLIB
+    LINECOUNT(60)
+  NOLIST
+  NOMAP
+  NOMDECK
+  NONAME
+    NSYMBOL(NATIONAL)
+  NONUMBER
+    NUMPROC(NOPFD)
+    OBJECT
+  NOOFFSET
+  NOOPTIMIZE
+    OUTDD(SYSOUT)
+    PGMNAME(COMPAT)
+    RENT
+    RMODE(AUTO)
+    SEQUENCE
+    SIZE(MAX)
+    SOURCE
+    SPACE(1)
+  NOSQL
+    SQLCCSID
+  NOSSRANGE
+  NOTERM
+  NOTEST
+  NOTHREAD
+    TRUNC(STD)
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0                         Date 10/01/2018  Time 19:54:48   Page     2
+0 NOVBREF
+  NOWORD
+    XMLPARSE(XMLSS)
+  NOXREF
+    YEARWINDOW(1900)
+    ZWB
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CUSTLIST  Date 10/01/2018  Time 19:54:48   Page     3
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000001                IDENTIFICATION DIVISION.                                         00060007
+   000002                PROGRAM-ID.    CUSTLIST.                                         00061007
+   000003               *     WALLS 10/1/2018                                             00061107
+   000004               *     THIS PROGRAM PRINTS A JOB ORDER LIST                        00061207
+   000005                                                                                 00061303
+   000006                                                                                 00061403
+   000007                ENVIRONMENT DIVISION.                                            00061608
+   000008                                                                                 00061703
+   000009                INPUT-OUTPUT SECTION.                                            00061808
+   000010                                                                                 00061903
+   000011                FILE-CONTROL.                                                    00062008
+   000012                    SELECT CUSTOMER-FILE                                         00062108
+   000013                        ASSIGN TO FILEIN.                                        00062208
+   000014                    SELECT CUSTOMER-LIST                                         00062308
+   000015                        ASSIGN TO FILEOUT.                                       00062408
+   000016                                                                                 00062503
+   000017                                                                                 00062603
+   000018                DATA DIVISION.                                                   00062708
+   000019                                                                                 00062803
+   000020                FILE SECTION.                                                    00062908
+   000021                                                                                 00063003
+   000022                FD CUSTOMER-FILE.                                                00063108
+
+ ==000022==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUSTOMER-FILE".
+
+   000023                                                                                 00063203
+   000024                01 CUSTOMER-RECORD                 PIC X(80).                    00063308
+   000025                                                                                 00063403
+   000026                                                                                 00063503
+   000027                FD CUSTOMER-LIST.                                                00063608
+
+ ==000027==> IGYGR1216-I A "RECORDING MODE" of "F" was assumed for file "CUSTOMER-LIST".
+
+   000028                                                                                 00063703
+   000029                01 CUSTOMER-LINE                   PIC X(80).                    00063808
+   000030                                                                                 00063903
+   000031                                                                                 00064003
+   000032                WORKING-STORAGE SECTION.                                         00064108
+   000033                                                                                 00064203
+   000034                01 SW-SWITCHES.                                                  00064308
+   000035                   05 SW-EOF-SWITCH               PIC X(3).                      00064408
+   000036                                                                                 00064503
+   000037                01 CR-CUSTOMER-RECORD.                                           00064608
+   000038                   05 CR-FIRST-NAME               PIC X(12).                     00064708
+   000039                   05 CR-LAST-NAME                PIC X(12).                     00064808
+   000040                   05 CR-PHONE                    PIC X(10).                     00064908
+   000041                   05 CR-DATE                     PIC X(6).                      00065008
+   000042                   05 CR-CLASS                    PIC X(6).                      00065108
+   000043                   05 CR-MANU                     PIC X(8).                      00065208
+   000044                   05 CR-SERIES                   PIC X(8).                      00065308
+   000045                   05 CR-MODEL                    PIC X(8).                      00065408
+   000046                   05 CR-ISSUE-DESC               PIC X(10).                     00065508
+   000047                                                                                 00065603
+   000048                01 CL-CUSTOMER-LINE.                                             00065708
+   000049                   05 CL-FIRST-NAME               PIC X(12).                     00065808
+   000050                   05 CL-LAST-NAME                PIC X(12).                     00065908
+   000051                   05 CL-PHONE                    PIC X(10).                     00066008
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CUSTLIST  Date 10/01/2018  Time 19:54:48   Page     4
+   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+0  000052                   05 CL-DATE                     PIC X(6).                      00066108
+   000053                   05 CL-CLASS                    PIC X(6).                      00066208
+   000054                   05 CL-MANU                     PIC X(8).                      00066308
+   000055                   05 CL-SERIES                   PIC X(8).                      00066408
+   000056                   05 CL-MODEL                    PIC X(8).                      00066508
+   000057                   05 CL-ISSUE-DESC               PIC X(10).                     00066608
+   000058                                                                                 00066703
+   000059                   PROCEDURE DIVISION.                                           00066808
+   000060                                                                                 00066903
+   000061                   000-PRINT-CUSTOMER-LIST.                                      00067008
+   000062                       OPEN INPUT CUSTOMER-FILE                                  00067108
+   000063                           OUTPUT CUSTOMER-LIST                                  00067208
+   000064                       MOVE 'NO ' TO SW-EOF-SWITCH                               00067308
+   000065                       PERFORM UNTIL SW-EOF-SWITCH IS EQUAL TO 'YES'             00067408
+   000066      1                    READ CUSTOMER-FILE                                    00067508
+   000067      1                           INTO CR-CUSTOMER-RECORD                        00067608
+   000068      1                      AT END                                              00067708
+   000069      2                        MOVE 'YES' TO SW-EOF-SWITCH                       00067808
+   000070      1                      NOT AT END                                          00067908
+   000071      2                        PERFORM 200-PROCESS                               00068010
+   000072      1                      END-READ                                            00068108
+   000073                       END-PERFORM                                               00068208
+   000074                       CLOSE CUSTOMER-FILE                                       00068308
+   000075                             CUSTOMER-LIST                                       00068408
+   000076                       STOP RUN                                                  00068508
+   000077                       .                                                         00068608
+   000078                   200-PROCESS.                                                  00068711
+   000079                       MOVE CR-FIRST-NAME TO CL-FIRST-NAME                       00068810
+   000080                       MOVE CR-LAST-NAME TO CL-LAST-NAME                         00068910
+   000081                       MOVE CR-PHONE TO CL-PHONE                                 00069010
+   000082                       MOVE CR-DATE TO CL-DATE                                   00069110
+   000083                       MOVE CR-CLASS TO CL-CLASS                                 00069210
+   000084                       MOVE CR-MANU TO CL-MANU                                   00069310
+   000085                       MOVE CR-SERIES TO CL-SERIES                               00069410
+   000086                       MOVE CR-MODEL TO CL-MODEL                                 00069510
+   000087                       MOVE CR-ISSUE-DESC TO CL-ISSUE-DESC                       00069610
+   000088                       MOVE CL-CUSTOMER-LINE TO CUSTOMER-LINE                    00069710
+   000089                       WRITE CUSTOMER-LINE                                       00069810
+   000090                            AFTER ADVANCING 2 LINES                              00069910
+   000091                      .                                                          00070010
+1PP 5655-S71 IBM Enterprise COBOL for z/OS  4.2.0               CUSTLIST  Date 10/01/2018  Time 19:54:48   Page     5
+0LineID  Message code  Message text
+
+     22  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUSTOMER-FILE".
+
+     27  IGYGR1216-I   A "RECORDING MODE" of "F" was assumed for file "CUSTOMER-LIST".
+-Messages    Total    Informational    Warning    Error    Severe    Terminating
+0Printed:       2           2
+-* Statistics for COBOL program CUSTLIST:
+ *    Source records = 91
+ *    Data Division statements = 24
+ *    Procedure Division statements = 19
+0End of compilation 1,  program CUSTLIST,  highest severity 0.
+0Return code 0
+0ANGELA      WOOD        8646343176040815PHONE APPLE   IPHONE  4S      BRKNSCREEN
+0KAJUANZA    WASHINGTON  8645561324052116PHONE SAMSUNG GALAXY  NOTE 7  BRKNTOUCH
+0JEANETTE    ROBERTSON   6783144549011815LAPTOPACER    E5-575G ASPIRE  HDDTOSSD
+0JACQUELYN   STOUDEMIRE  3526426700080117PHONE APPLE   IPHONE  X       BACKCAMERA
+0YOLANDANETTENEGRON-TAYLO6178217633092418PHONE APPLE   IPHONE  8S
+0LAWERANCE   HEMINGER    3364021939081518LAPTOPAPPLE   MACBOOK PRO2015 STARTUP
+0REBEKAH     JACKSON     4086559199021717PHONE APPLE   IPHONE  6S      BRKNSCREEN
+0BARBIE      FITZGERALD  8035216174070816PHONE SAMSUNG GALAXY  S7      BATTERY
+0COURTNEY    SINCHAK     8038070786092916PHONE SAMSUNG GALAXY  NOTE 8  BATTERY
+0FRANCHESKA  ASBURY      7162429800101718LAPTOPLENOVA  THINKPADX1YOGA  BRKNTOUCH
+0SARAH       JENNINGS    8645129943011114PHONE SAMSUNG GALAXY  S9      BRKNSCREEN
+0MARK        HAMEL       9486231155120115PHONE SAMSUNG GALAXY  S8      BRKNSCREEN
+0JOHN        BROWNING    7621112233051816PHONE APPLE   IPHONE  X       BRKNSCREEN
+0BART        FRAMPTON    5598731221021417LAPTOPAPPLE   MACBOOK AIR     BRKNSCREEN
+0SUSAN       COOLEY      8887645664042917PHONE SAMSUNG GALAXY  S3      BRKNMIC
+0JENNA       SAMON       8437284499051818PHONE HTC     ONE     M9      BRKNSCREEN
+0HANNAH      BAKER       7773211234031214LAPTOPAPPLE   MACBOOK PRO     BRKNSCREEN
+0SALLY       RIDER       9755544432090715PHONE SAMSUNG GALAXY  S5      BRKNSCREEN
+0JOHN        FRESCA      8716543344031918LAPTOPRACER   NOTEBOOKSLIM    BRKNSCREEN
+0PETER       PARKER      7112345576101117PHONE MOTOROLAX       PLAY    BRKNSCREEN
+0JODY        RIDER       2465894698031218PHONE APPLE   IPHONE  5C
+0KAITLYN     JOYNER      2136548562041518PHONE SAMSUNG GALAXY  NOTE 7  BATTERY
+0MARY        LAMB        2136014852031217PHONE MOTO    DROID   RAZOR   BLUETOOTH
+0LIL         TUNECHIEF   2135216458110317PHONE APPLE   IPHONE  X       BRKNTOUCH
+0CAITLYN     NOSAL       6842039185050918PHONE APPLE   IPHONE  7       BRKNSCREEN
+
